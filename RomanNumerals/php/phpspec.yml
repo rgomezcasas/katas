@@ -1,0 +1,4 @@
+suites:
+    my_suite:
+        namespace: RomanNumeral
+        psr4_prefix: RomanNumeral
