@@ -3,4 +3,4 @@
 (defn factorial-of [number]
   (if (<= number 1)
     1
-    (* number (factorial-of (dec number)))))
+    (bigint (* number (factorial-of (dec number))))))
