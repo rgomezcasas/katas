@@ -1,0 +1,63 @@
+(require 'bowling.core)
+(def a-gutter-game (repeat 20 0))
+(def a-no-spares-no-strikes-game
+  (concat [1 6 4 5 3 1] (repeat 14 0)))
+(def a-game-with-spares
+  (concat [4 6 4 5 3 1] (repeat 14 0)))
+(def a-game-with-strikes
+  (concat [10 4 5 3 1] (repeat 14 0)))
+(def a-game-with-spare-in-10th-frame
+  (concat (repeat 14 0) [3 1 4 2 4 6] [2]))
+(def a-game-with-strike-in-10th-frame
+  (concat (repeat 14 0) [3 1 4 2 10] [2 3]))
+(def a-perfect-game
+  (repeat 12 10))
+(bowling.core/score a-gutter-game)
+(require 'bowling.core)
+(bowling.core/rolls-to-frames a-gutter-game)
+(require 'bowling.core :reload)
+(bowling.core/rolls-to-frames a-gutter-game)
+(require 'bowling.core :reload)
+bowling.core/frames-with-bonus (partition 2 a-game-with-spares)
+(bowling.core/frames-with-bonus (partition 2 a-game-with-spares))
+(bowling.core/rolls-to-frames (partition 2 a-game-with-spares))
+(bowling.core/frames-with-bonus [1 2])
+(bowling.core/frames-with-bonus [1 9])
+(bowling.core/frames-with-bonus [10])
+(map bowling.core/frames-with-bonus [[10] [2 3]])
+(partition 2 a-game-with-spares)
+(map bowling.core/frames-with-bonus (partition 2 a-game-with-spares))
+(bowling.core/rolls-to-frames a-game-with-spares)
+(require 'bowling.core :reload)
+exit
+(require 'bowling.core :reload)
+(rolls-to-frames [1 2 3 4 5 6])
+(bowling.core/rolls-to-frames [1 2 3 4 5 6 7 8 9 10])
+(def a-gutter-game
+  (repeat 20 0))
+; => 0
+(def a-game-with-one-pin-knocked-each-roll
+  (repeat 1 20))
+; => 20
+(def a-no-spares-no-strikes-game
+  (concat [5 6 4 5 3 1] (repeat 14 0)))
+; => 24
+(def a-game-with-spares
+  (concat [4 6 5] (repeat 17 0)))
+; => 20
+(def a-game-with-strikes
+  (concat [10 4 5 3 1] (repeat 14 0)))
+(def a-game-with-spare-in-10th-frame
+  (concat (repeat 14 0) [3 1 4 2 4 6] [2]))
+(def a-game-with-strike-in-10th-frame
+  (concat (repeat 14 0) [3 1 4 2 10] [2 3]))
+(def a-perfect-game
+  (repeat 12 10))
+(score a-game-with-spares)
+(bowling.core/score a-gutter-game)
+(bowling.core/rolls-to-frames a-gutter-game)
+(require 'bowling.core :reload)
+(bowling.core/rolls-to-frames a-gutter-game)
+(bowling.core/score a-gutter-game)
+(count [])
+(count [[] []])
