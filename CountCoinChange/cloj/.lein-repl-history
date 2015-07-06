@@ -1,0 +1,23 @@
+(def coins [50 25 10 5 1])
+(defn exists-as-coin? [amount]
+  (contains? coins amount))
+(contains? coins 5)
+(contains? coins 4)
+(contains? coins 13)
+(contains? coins 15)
+(contains? coins 25)
+(contains? coins 26)
+(contains? coins 24)
+(some? coins 24)
+(some coins 24)
+(defn exists-as-coin? [amount]
+  (some #(= % amount) coins))
+exists-as-coin? 3
+exists-as-coin? 5
+(exists-as-coin? 5)
+(exists-as-coin? 4)
+(exists-as-coin? 1)
+(exists-as-coin? 15)
+(exists-as-coin? 25)
+(if (nil) false true)
+exit
