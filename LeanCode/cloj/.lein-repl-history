@@ -1,0 +1,8 @@
+(require '[clojure.string :as str])
+(str/split "paco" #" "))
+(str/split "paco" #" ")
+(str/split "paco asdasd" #" ")
+(conj (:hola 1 :pepe 2) (:banana 100))
+(conj [:hola 1 :pepe 2] [:banana 100])
+(conj [:hola 1 :pepe 2] :banana 100)
+exit
